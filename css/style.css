@@ -1,0 +1,176 @@
+/* ===== Estilo geral do MeuBolso ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* ----- Topo ----- */
+.topo {
+    background: #1b5e20;
+    color: #fff;
+    text-align: center;
+    padding: 24px 16px;
+}
+
+.topo h1 {
+    font-size: 2rem;
+}
+
+/* ----- Menu ----- */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #2e7d32;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background: #43a047;
+}
+
+/* ----- Conteúdo ----- */
+.conteudo {
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.conteudo h2 {
+    margin-bottom: 12px;
+}
+
+/* Cartões da página inicial */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.cartao {
+    display: block;
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cartao:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+
+.cartao h3 {
+    color: #2e7d32;
+    margin-bottom: 6px;
+}
+
+/* ----- Formulários ----- */
+.formulario {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1b5e20;
+}
+
+button[type="reset"] {
+    background: #757575;
+}
+
+/* ----- Mensagens de retorno do servidor ----- */
+.mensagem {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 4px;
+    display: none;
+}
+
+.mensagem.sucesso {
+    display: block;
+    background: #e8f5e9;
+    border: 1px solid #66bb6a;
+}
+
+.mensagem.erro {
+    display: block;
+    background: #ffebee;
+    border: 1px solid #ef5350;
+}
+
+.mensagem ul {
+    margin-left: 20px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2e7d32;
+}
+
+/* ----- Rodapé ----- */
+.rodape {
+    text-align: center;
+    padding: 16px;
+    color: #666;
+    font-size: 0.9rem;
+}
