@@ -6,20 +6,6 @@ Sistema administrativo simples para controle de finanças pessoais. Nesta etapa,
 tem as telas de cadastro e o lado servidor **apenas recebe, valida e processa** os dados
 (ainda não há banco de dados).
 
-## Como executar
-
-É preciso ter o PHP instalado (versão 8 ou superior).
-
-```bash
-cd gerenciador-gastos
-php -S localhost:8000
-```
-
-Depois, abra no navegador: <http://localhost:8000>
-
-> Abrir o `index.html` com dois cliques não funciona para enviar os formulários,
-> porque o PHP precisa de um servidor rodando.
-
 ## Estrutura de pastas
 
 ```
