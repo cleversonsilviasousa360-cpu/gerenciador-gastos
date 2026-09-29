@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas – MeuBolso</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>MeuBolso</h1>
+        <p>Gerenciador de gastos pessoais</p>
+    </header>
+
+    <nav class="menu">
+        <a href="../index.html">Início</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="contas.html" class="ativo">Contas</a>
+        <a href="categorias.html">Categorias</a>
+        <a href="despesas.html">Despesas</a>
+        <a href="metas.html">Metas</a>
+    </nav>
+
+    <main class="conteudo">
+        <h2>Cadastro de Conta</h2>
+
+        <form class="formulario" action="../php/conta.php" method="post" novalidate>
+            <div class="campo">
+                <label for="apelido">Apelido da conta (ex.: Conta salário)</label>
+                <input type="text" id="apelido" name="apelido">
+            </div>
+            <div class="campo">
+                <label for="tipo">Tipo de conta</label>
+                <select id="tipo" name="tipo">
+                    <option value="">Selecione…</option>
+                    <option value="corrente">Conta corrente</option>
+                    <option value="poupanca">Poupança</option>
+                    <option value="investimento">Investimento</option>
+                    <option value="carteira">Carteira (dinheiro em espécie)</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="banco">Banco / instituição</label>
+                <input type="text" id="banco" name="banco">
+            </div>
+            <div class="campo">
+                <label for="agencia">Agência (somente números)</label>
+                <input type="text" id="agencia" name="agencia" inputmode="numeric">
+            </div>
+            <div class="campo">
+                <label for="numero">Número da conta (ex.: 12345-6)</label>
+                <input type="text" id="numero" name="numero">
+            </div>
+            <div class="campo">
+                <label for="saldo_inicial">Saldo inicial (R$)</label>
+                <input type="number" id="saldo_inicial" name="saldo_inicial" step="0.01">
+            </div>
+
+            <div class="botoes">
+                <button type="submit">Cadastrar</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+
+        <div class="mensagem"></div>
+
+        <a class="voltar" href="../index.html">&larr; Voltar para a página inicial</a>
+    </main>
+
+    <script src="../js/requisicao.js"></script>
+</body>
+</html>
