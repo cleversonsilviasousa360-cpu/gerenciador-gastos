@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despesas – MeuBolso</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>MeuBolso</h1>
+        <p>Gerenciador de gastos pessoais</p>
+    </header>
+
+    <nav class="menu">
+        <a href="../index.html">Início</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="contas.html">Contas</a>
+        <a href="categorias.html">Categorias</a>
+        <a href="despesas.html" class="ativo">Despesas</a>
+        <a href="metas.html">Metas</a>
+    </nav>
+
+    <main class="conteudo">
+        <h2>Registro de Despesa</h2>
+
+        <form class="formulario" action="../php/despesa.php" method="post" novalidate>
+            <div class="campo">
+                <label for="descricao">Descrição (ex.: Mercado do mês)</label>
+                <input type="text" id="descricao" name="descricao">
+            </div>
+            <div class="campo">
+                <label for="valor">Valor total (R$)</label>
+                <input type="number" id="valor" name="valor" step="0.01" min="0">
+            </div>
+            <div class="campo">
+                <label for="data">Data da compra</label>
+                <input type="date" id="data" name="data">
+            </div>
+            <div class="campo">
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria">
+                    <option value="">Selecione…</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="moradia">Moradia</option>
+                    <option value="saude">Saúde</option>
+                    <option value="educacao">Educação</option>
+                    <option value="lazer">Lazer</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="forma_pagamento">Forma de pagamento</label>
+                <select id="forma_pagamento" name="forma_pagamento">
+                    <option value="">Selecione…</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="pix">Pix</option>
+                    <option value="debito">Cartão de débito</option>
+                    <option value="credito">Cartão de crédito</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="parcelas">Número de parcelas (só no crédito)</label>
+                <input type="number" id="parcelas" name="parcelas" min="1" max="24" value="1">
+            </div>
+
+            <div class="botoes">
+                <button type="submit">Registrar</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+
+        <div class="mensagem"></div>
+
+        <a class="voltar" href="../index.html">&larr; Voltar para a página inicial</a>
+    </main>
+
+    <script src="../js/requisicao.js"></script>
+</body>
+</html>
