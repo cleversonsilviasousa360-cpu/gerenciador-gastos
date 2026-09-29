@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias – MeuBolso</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>MeuBolso</h1>
+        <p>Gerenciador de gastos pessoais</p>
+    </header>
+
+    <nav class="menu">
+        <a href="../index.html">Início</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="contas.html">Contas</a>
+        <a href="categorias.html" class="ativo">Categorias</a>
+        <a href="despesas.html">Despesas</a>
+        <a href="metas.html">Metas</a>
+    </nav>
+
+    <main class="conteudo">
+        <h2>Cadastro de Categoria</h2>
+
+        <form class="formulario" action="../php/categoria.php" method="post" novalidate>
+            <div class="campo">
+                <label for="nome">Nome da categoria (ex.: Alimentação)</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <div class="campo">
+                <label for="tipo">Tipo</label>
+                <select id="tipo" name="tipo">
+                    <option value="">Selecione…</option>
+                    <option value="despesa">Despesa</option>
+                    <option value="receita">Receita</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="limite_mensal">Limite mensal (R$) – só para despesas</label>
+                <input type="number" id="limite_mensal" name="limite_mensal" step="0.01" min="0">
+            </div>
+            <div class="campo">
+                <label for="cor">Cor de identificação</label>
+                <input type="color" id="cor" name="cor" value="#2e7d32">
+            </div>
+            <div class="campo">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao"></textarea>
+            </div>
+
+            <div class="botoes">
+                <button type="submit">Cadastrar</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+
+        <div class="mensagem"></div>
+
+        <a class="voltar" href="../index.html">&larr; Voltar para a página inicial</a>
+    </main>
+
+    <script src="../js/requisicao.js"></script>
+</body>
+</html>
