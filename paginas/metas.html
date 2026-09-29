@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas – MeuBolso</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="topo">
+        <h1>MeuBolso</h1>
+        <p>Gerenciador de gastos pessoais</p>
+    </header>
+
+    <nav class="menu">
+        <a href="../index.html">Início</a>
+        <a href="usuarios.html">Usuários</a>
+        <a href="contas.html">Contas</a>
+        <a href="categorias.html">Categorias</a>
+        <a href="despesas.html">Despesas</a>
+        <a href="metas.html" class="ativo">Metas</a>
+    </nav>
+
+    <main class="conteudo">
+        <h2>Cadastro de Meta de Economia</h2>
+
+        <form class="formulario" action="../php/meta.php" method="post" novalidate>
+            <div class="campo">
+                <label for="titulo">Objetivo (ex.: Viagem de férias)</label>
+                <input type="text" id="titulo" name="titulo">
+            </div>
+            <div class="campo">
+                <label for="valor_alvo">Valor que deseja juntar (R$)</label>
+                <input type="number" id="valor_alvo" name="valor_alvo" step="0.01" min="0">
+            </div>
+            <div class="campo">
+                <label for="valor_atual">Quanto já tem guardado (R$)</label>
+                <input type="number" id="valor_atual" name="valor_atual" step="0.01" min="0" value="0">
+            </div>
+            <div class="campo">
+                <label for="data_limite">Data limite</label>
+                <input type="date" id="data_limite" name="data_limite">
+            </div>
+            <div class="campo">
+                <label for="prioridade">Prioridade</label>
+                <select id="prioridade" name="prioridade">
+                    <option value="">Selecione…</option>
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+
+            <div class="botoes">
+                <button type="submit">Cadastrar</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+
+        <div class="mensagem"></div>
+
+        <a class="voltar" href="../index.html">&larr; Voltar para a página inicial</a>
+    </main>
+
+    <script src="../js/requisicao.js"></script>
+</body>
+</html>
