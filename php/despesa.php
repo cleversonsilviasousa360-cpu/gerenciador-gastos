@@ -33,7 +33,7 @@ $formas = [
 
 $erros = [];
 
-if (mb_strlen($descricao) < 3) {
+if (tamanho($descricao) < 3) {
     $erros[] = 'Descreva a despesa (mínimo de 3 letras).';
 }
 
@@ -59,7 +59,7 @@ if (!array_key_exists($formaPagamento, $formas)) {
 if ($parcelas === '') {
     $parcelas = '1';
 }
-if (!ctype_digit($parcelas) || (int) $parcelas < 1 || (int) $parcelas > 24) {
+if (!preg_match('/^[0-9]+$/', $parcelas) || (int) $parcelas < 1 || (int) $parcelas > 24) {
     $erros[] = 'O número de parcelas deve ser um inteiro entre 1 e 24.';
 } elseif ((int) $parcelas > 1 && $formaPagamento !== 'credito') {
     $erros[] = 'Só é possível parcelar no cartão de crédito.';

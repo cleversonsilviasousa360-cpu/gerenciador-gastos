@@ -18,7 +18,7 @@ $prioridades = ['baixa' => 'Baixa', 'media' => 'Média', 'alta' => 'Alta'];
 
 $erros = [];
 
-if (mb_strlen($titulo) < 3) {
+if (tamanho($titulo) < 3) {
     $erros[] = 'Descreva o objetivo (mínimo de 3 letras).';
 }
 

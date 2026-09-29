@@ -18,7 +18,7 @@ $confirmarSenha  = $_POST['confirmar_senha'] ?? '';
 
 $erros = [];
 
-if (mb_strlen($nome) < 3) {
+if (tamanho($nome) < 3) {
     $erros[] = 'Informe o nome completo (mínimo de 3 letras).';
 }
 

@@ -17,7 +17,7 @@ $descricao = campo('descricao');
 
 $erros = [];
 
-if (mb_strlen($nome) < 3) {
+if (tamanho($nome) < 3) {
     $erros[] = 'O nome da categoria deve ter pelo menos 3 letras.';
 }
 
@@ -29,7 +29,7 @@ if (!preg_match('/^#[0-9a-fA-F]{6}$/', $cor)) {
     $erros[] = 'Escolha uma cor válida.';
 }
 
-if (mb_strlen($descricao) < 5) {
+if (tamanho($descricao) < 5) {
     $erros[] = 'Escreva uma descrição curta (mínimo de 5 caracteres).';
 }
 
@@ -43,7 +43,7 @@ if (count($erros) > 0) {
 }
 
 // Gera o código: tira acentos, deixa maiúsculo e troca espaços por hífen.
-$semAcento = iconv('UTF-8', 'ASCII//TRANSLIT', $nome);
+$semAcento = tirarAcentos($nome);
 $codigo = strtoupper(preg_replace('/[^A-Za-z0-9]+/', '-', $semAcento));
 $codigo = trim($codigo, '-');
 
