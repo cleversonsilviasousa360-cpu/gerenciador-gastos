@@ -10,17 +10,17 @@ tem as telas de cadastro e o lado servidor **apenas recebe, valida e processa** 
 
 ```
 gerenciador-gastos/
-├── index.html            Página inicial com o menu
-├── css/style.css         Estilo de todas as páginas
-├── js/requisicao.js      Envia os formulários ao PHP com fetch e mostra a resposta
-├── paginas/              As 5 páginas com formulário
+├── index.html            
+├── css/style.css         
+├── js/requisicao.js      
+├── paginas/              
 │   ├── usuarios.html
 │   ├── contas.html
 │   ├── categorias.html
 │   ├── despesas.html
 │   └── metas.html
-└── php/                  Lado servidor (responde somente JSON, sem HTML)
-    ├── funcoes.php       Funções comuns (ler campo, validar data, responder JSON…)
+└── php/                  
+    ├── funcoes.php       
     ├── usuario.php
     ├── conta.php
     ├── categoria.php
