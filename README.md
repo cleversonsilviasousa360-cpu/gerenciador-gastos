@@ -3,8 +3,8 @@
 Trabalho do Momento I da disciplina **Tecnologias para Internet II**.
 
 Sistema administrativo simples para controle de finanças pessoais. Nesta etapa, o sistema
-tem as telas de cadastro e o lado servidor **apenas recebe, valida e processa** os dados
-(ainda não há banco de dados).
+tem as telas de cadastro e o lado servidor **apenas recebe, valida e processa** os dados.
+
 
 ## Estrutura de pastas
 
